@@ -8,10 +8,10 @@ class Bill extends Model
 {
        protected $table = "bills";
 
-       public funtion bill_detail(){
+       public function bill_detail(){
        		return $this->hasMany('App\BillDetail','id_bill','id');
        }
-       public funtion customer(){
+       public function customer(){
        		return $this->belongsTo('App\Customer','id_customer','id');
        }
 }
