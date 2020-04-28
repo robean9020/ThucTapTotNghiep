@@ -24,19 +24,28 @@
 			<div class="row">
 				<div class="col-sm-8">
 					<h2>Liên hệ với chúng tôi</h2>
+					@if(count($errors)>0)
+                        @foreach($errors->all() as $err)
+                            <div class="alert alert-danger">{{$err}}</div> <br>
+                        @endforeach
+                    @endif
+					@if (session('thongbao'))
+					<div class="alert alert-success">{{session('thongbao')}}</div>
+					@endif
 					<div class="space20">&nbsp;</div>
-					<form action="#" method="post" class="contact-form">	
+					<form action="lienhe" method="POST" class="contact-form">
+					<input type="hidden" name="_token" value="{{csrf_token()}}">	
 						<div class="form-block">
-							<input name="your-name" type="text" placeholder="Your Name (required)">
+							<input name="Ten" type="text" placeholder="Nhập tên của bạn">
 						</div>
 						<div class="form-block">
-							<input name="your-email" type="email" placeholder="Your Email (required)">
+							<input name="Email" type="email" placeholder="Nhập email của bạn">
 						</div>
 						<div class="form-block">
-							<input name="your-subject" type="text" placeholder="Subject">
+							<input name="TieuDe" type="text" placeholder="Tiêu đề">
 						</div>
 						<div class="form-block">
-							<textarea name="your-message" placeholder="Your Message"></textarea>
+							<textarea name="LienHe" placeholder="Nội dung liên hệ"></textarea>
 						</div>
 						<div class="form-block">
 							<button type="submit" class="beta-btn primary">Gửi Thông Tin <i class="fa fa-chevron-right"></i></button>

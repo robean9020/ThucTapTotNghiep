@@ -9,13 +9,7 @@
 				</div>
 				<div class="pull-right auto-width-right">
 					<ul class="top-details menu-beta l-inline">
-						@if(Auth::check())
-						<li><a href="{{route('dangky')}}">Chào bạn {{Auth::user()->full_name}}</a></li>
-						<li><a href="{{route('log-out')}}">Đăng Xuất</a></li>
-						@else
-						<li><a href="{{route('dangky')}}">Đăng kí</a></li>
 						<li><a href="{{route('dangnhap')}}">Đăng nhập</a></li>
-						@endif
 					</ul>
 				</div>
 				<div class="clearfix"></div>
@@ -75,7 +69,7 @@
 				<nav class="main-menu">
 					<ul class="l-inline ov">
 						<li><a href="{{route('trang-chu')}}">Trang chủ</a></li>
-						<li><a href="{{route('trang-chu')}}">Loại sản phẩm</a>
+						<li><a href="{{route('lienhe')}}">Loại sản phẩm</a>
 							<ul class="sub-menu">
 								<@foreach($loai_sp as $loai)
 								<li><a href="{{route('loaisanpham',$loai->id)}}">{{$loai->name}}</a></li>

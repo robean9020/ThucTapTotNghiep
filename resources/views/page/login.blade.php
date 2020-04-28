@@ -16,32 +16,39 @@
 	
 	<div class="container">
 		<div id="content">
-			
-			<form action="{{route('dangnhap')}}" method="post" class="beta-form-checkout">
-				<input type = "hidden" name = "_token" value="{{csrf_token()}}"
-				<div class="row">
-					<div class="col-sm-3"></div>
-					@if(Session::has('flag'))
-					<div class="alert alert-{{Session::get('flag')}}">{{Session::get('message')}}</div>
-					@endif
-					<div class="col-sm-6">
-						<h4>Đăng nhập</h4>
-						<div class="space20">&nbsp;</div>
-						<div class="form-block">
-							<label for="email">Địa chỉ email</label>
-							<input type="email" id="email" name = "email" required>
-						</div>
-						<div class="form-block">
-							<label for="phone">Mật khẩu</label>
-							<input type="password" id="password" name="password" required>
-						</div>
-						<div class="form-block">
-							<button type="submit" class="btn btn-primary">Đăng nhập</button>
-						</div>
-					</div>
-					<div class="col-sm-3"></div>
-				</div>
-			</form>
+			<div class="container">
+		        <div class="row">
+		            <div class="col-md-4 col-md-offset-4">
+		                <div class="login-panel panel panel-default">
+		                    @if(count($errors)>0)
+		                        @foreach($errors->all() as $err)
+		                            <div class="alert alert-danger">{{$err}}</div> <br>
+		                        @endforeach
+		                    @endif
+		                    @if (session('thongbao'))
+		                        <div class="alert alert-danger">{{session('thongbao')}}</div>
+		                    @endif
+		                    <div class="panel-heading">
+		                        <h3 class="panel-title">Mời bạn đăng nhập</h3>
+		                    </div>
+		                    <div class="panel-body">
+		                        <form role="form" method="POST" action="admin/dangnhap">
+		                            <input type="hidden" name="_token" value="{{csrf_token()}}">
+		                            <fieldset>
+		                                <div class="form-group">
+		                                    <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
+		                                </div>
+		                                <div class="form-group">
+		                                    <input class="form-control" placeholder="Password" name="password" type="password" value="">
+		                                </div>
+		                                <button type="submit" class="btn btn-lg btn-success btn-block">Đăng nhập</button>
+		                            </fieldset>
+		                        </form>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+    		</div>
 		</div> <!-- #content -->
 	</div> <!-- .container -->
 	@endsection
