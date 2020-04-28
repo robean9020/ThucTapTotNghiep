@@ -45,14 +45,7 @@
 							<div class="space20">&nbsp;</div>
 
 							<div class="single-item-options">
-								<select class="wc-select" name="color">
-									<option>Số lượng</option>
-									<option value="1">1</option>
-									<option value="2">2</option>
-									<option value="3">3</option>
-									<option value="4">4</option>
-									<option value="5">5</option>
-								</select>
+								<div><h3>Đặt Hàng</h3>
 								<a class="add-to-cart" href="{{route('themgiohang',$sanpham->id)}}"><i class="fa fa-shopping-cart"></i></a>
 								<div class="clearfix"></div>
 							</div>

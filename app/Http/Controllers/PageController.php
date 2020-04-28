@@ -44,7 +44,6 @@ class PageController extends Controller
     }
 
     public function postLienHe(Request $request){
-        $dd($request);
         $this->validate($request,
             [
                 'Ten'=> 'required|min:3|max:100',

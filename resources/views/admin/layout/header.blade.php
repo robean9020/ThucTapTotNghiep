@@ -14,11 +14,11 @@
         <!-- /.dropdown -->
         <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                <i class="fa fa-drupal fa-fw"></i>  <i class="fa fa-caret-down"></i>
             </a>
             <ul class="dropdown-menu dropdown-user">
                 @if(Auth::check())
-                <li><a href="admin/user/sua/{{Auth::user()->id}}"><i class="fa fa-user fa-fw"></i> Boss</a>
+                <li><a href="admin/user/sua/{{Auth::user()->id}}"><i class="fa fa-drupal fa-fw"></i> Boss</a>
                 </li>
                 <li><a href="admin/user/sua/{{Auth::user()->id}}"><i class="fa fa-gear fa-fw"></i> Cài đặt</a>
                 </li>

@@ -2,25 +2,25 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-3">
-					<div class="widget">
+					<div>
 						<h4 class="widget-title">Facebook</h4>
-						<div> Facebook.com/robean.dyk </div>
+						<a href="{{route('trang-chu')}}"><i class="fa fa-facebook fa-fw" ></i> Facebook.com/robean.dyk<span class="fa arrow"></span></a>
 					</div>
 				</div>
 				<div class="col-sm-2">
-					<div class="widget">
+					<div>
 						<h4 class="widget-title">Cơ Sở</h4>
 						<div>
 							<ul>
-								<li><a href="blog_fullwidth_2col.html"><i class="fa fa-chevron-right"></i>Số 186 Lê Thanh Nghị</a></li>
-								<li><a href="blog_fullwidth_2col.html"><i class="fa fa-chevron-right"></i>Số 233 Phố Xã Đàn,Đống Đa,Hà Nội.</a></li>
+								<li><i class="fa fa-chevron-right"></i>Số 186 Lê Thanh Nghị</li>
+								<li><i class="fa fa-chevron-right"></i>Số 233 Phố Xã Đàn,Đống Đa,Hà Nội.</li>
 							</ul>
 						</div>
 					</div>
 				</div>
 				<div class="col-sm-4">
 				 <div class="col-sm-10">
-					<div class="widget">
+					<div>
 						<h4 class="widget-title">Tư vấn mua hàng</h4>
 						<div>
 							<div class="contact-info">

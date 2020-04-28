@@ -33,7 +33,7 @@
 					<div class="alert alert-success">{{session('thongbao')}}</div>
 					@endif
 					<div class="space20">&nbsp;</div>
-					<form action="lienhe" method="POST" class="contact-form">
+					<form action="lien-he" method="POST" class="contact-form">
 					<input type="hidden" name="_token" value="{{csrf_token()}}">	
 						<div class="form-block">
 							<input name="Ten" type="text" placeholder="Nhập tên của bạn">
